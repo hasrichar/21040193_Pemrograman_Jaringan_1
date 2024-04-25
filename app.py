@@ -29,18 +29,28 @@ while True:
             jawaban.append(
                 "Memakai baju hijau (1)"
                 if baju_hijau == "1"
-                else "Tidak memakai baju hijau (0)"
+                else "Tidak memakai baju hijau (0)\n"
+                "- Memakai Topi Biru"
             )
-            jawaban.append(
-                "Memakai topi biru (0)"
-            )
+            if baju_hijau == "1":
+                brown_trouser = input("Apakah Berang-Berang memakai brown trousers? (yes=1, no=0): ")
+                jawaban.append(
+                    "Memakai brown trousers (1)\n"
+                    "- Memakai topi biru"
+                    if brown_trouser == "1"
+                    else "Tidak memakai brown trousers (0)\n"
+                    "Memakai Topi Kuning"
+                )
+            # jawaban.append(
+            #     "Memakai topi biru (0)"
+            # )
     else:
         jawaban.append("Tidak memiliki ekor besar (0)")
         gigi_besar = input("Apakah Berang-Berang memiliki gigi besar? (yes=1, no=0): ")
         jawaban.append(
             "Memiliki gigi besar (1)"
             if gigi_besar == "1"
-            else "Tidak memiliki gigi besar (0)"
+            else "Memakai Topi Biru"
         )
 
         if gigi_besar == "1":
@@ -53,11 +63,11 @@ while True:
             jawaban.append(
                 "Memakai topi merah (1)"
                 if blue_trouser == "1"
-                else "Memakai topi kuning (0)"
+                else "Memakai topi Merah (0)"
             )
         else:
             jawaban.append("Tidak memakai blue trouser (0)")
-            jawaban.append("Memakai topi biru (1)")
+            jawaban.append("Memakai topi Kuning (1)")
 
     jawaban_total.append(
         jawaban
